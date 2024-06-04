@@ -175,16 +175,27 @@ input:focus-visible {
     padding: 2em 0;
 }
 
-.confirm-btn {
+.confirm-btn:not(:disabled) {
     width: 100%;
     padding: 0.45em 0;
     background-color: var(--very-dark-violet);
     color: var(--light-grayish-violet);
     border: none;
+    transition: all 500ms linear;
 }
 
-.confirm-btn:hover {
+.confirm-btn:disabled {
+    background-color: var(--light-grayish-violet);
+    color: var(--border-radius-input);
+    width: 100%;
+    padding: 0.45em 0;
+    border: none;
+}
+
+.confirm-btn:not(:disabled):hover {
     cursor: pointer;
+    background-color: var(--light-grayish-violet);
+    color: var(--very-dark-violet);
 }
 
 .hidden {
